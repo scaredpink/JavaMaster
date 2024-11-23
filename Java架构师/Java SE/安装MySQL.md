@@ -12,7 +12,7 @@ https://dev.mysql.com/downloads/mysql/
 
 安装的时候我们选custom自定一下位置就行
 
-![image-20241123152227403](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123152227403.png)
+![image-20241123152227403](assets/image-20241123152227403.png)
 
 注意mysql程序和mysql数据库不是一个东西
 
@@ -20,13 +20,13 @@ https://dev.mysql.com/downloads/mysql/
 
 选择好放数据的地方
 
-![image-20241123151005623](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123151005623.png)
+![image-20241123151005623](assets/image-20241123151005623.png)
 
 
 
 密码得设置好
 
-![image-20241123151029643](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123151029643.png)
+![image-20241123151029643](assets/image-20241123151029643.png)
 
 等着数据建好就ok
 
@@ -42,15 +42,15 @@ https://dev.mysql.com/downloads/mysql/
 
 
 
-![image-20241123152753490](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123152753490.png)
+![image-20241123152753490](assets/image-20241123152753490.png)
 
-![image-20241123152743808](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123152743808.png)
+![image-20241123152743808](assets/image-20241123152743808.png)
 
 # 进入数据库
 
 `mysql -uroot -p`
 
-![image-20241123153026208](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123153026208.png)
+![image-20241123153026208](assets/image-20241123153026208.png)
 
 # 用IDEA查看数据库
 

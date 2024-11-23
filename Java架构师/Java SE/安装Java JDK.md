@@ -6,19 +6,19 @@
 
 ​	最好的路径是登录[Oracle官网](https://www.oracle.com/java/technologies/downloads/)下载你所需要的稳定版本的JDK，因为我主要是面向工作，所以我就下载Java 8了。推荐使用压缩包而不是安装器。现在在Oracle官网下载大概率会要求注册之类的，随便搞搞就好了，除了下载JDK之外你暂时也用不上Oracle的其他东西（因为要付费，我们更倾向于开源免费的）
 
-![image-20241123133441243](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123133441243.png)
+![image-20241123133441243](assets/image-20241123133441243.png)
 
 ​	如果你的电脑连接官网会卡，我推荐你下载一份[文档](https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html)，因为学习中还是会经常查询文档的
 
-![image-20241123133649673](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123133649673.png)
+![image-20241123133649673](assets/image-20241123133649673.png)
 
 ​	下载好之后我们安装JDK即可，不推荐装在C盘
 
-![image-20241123133935948](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123133935948.png)
+![image-20241123133935948](assets/image-20241123133935948.png)
 
 ​	安装好之后目录内容如下
 
-![image-20241123134213293](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123134213293.png)
+![image-20241123134213293](assets/image-20241123134213293.png)
 
 # 2.环境变量
 
@@ -34,11 +34,11 @@
 
 ​	点击新建
 
-![image-20241123140241539](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123140241539.png)
+![image-20241123140241539](assets/image-20241123140241539.png)
 
 ​	配置系统变量（安装约定俗成，配置我们都用大写和下划线）（这目录是我的，不一定和你一样）
 
-![image-20241123140327272](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123140327272.png)
+![image-20241123140327272](assets/image-20241123140327272.png)
 
 ​	随后我们再Path中添加上我们的`JAVA_HOME`，路径是`%JAVA_HOME%\bin`。%告诉系统要解析字段。bin一般是程序可以执行的部分，是binary（二进制）的缩写
 
@@ -46,7 +46,7 @@
 
 ​	现在我们就可以在任意路径下都可以运行Java了，打开cmd，输入`java -version`查看你的版本，如果能显示出来就没问题了
 
-![image-20241123141539354](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123141539354.png)
+![image-20241123141539354](assets/image-20241123141539354.png)
 
 
 

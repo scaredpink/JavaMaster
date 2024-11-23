@@ -10,7 +10,7 @@ https://maven.apache.org/download.cgi
 
 ​	打开官网，这个页面会有这些
 
-![image-20241123145054864](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123145054864.png)
+![image-20241123145054864](assets/image-20241123145054864.png)
 
 ​	直接选择Link就可以，另外两个是校验和签名，一般用不到
 
@@ -24,7 +24,7 @@ https://maven.apache.org/download.cgi
 
 ​	接下来，我推荐你专门找一个文件夹，用来放你以后所有用到的jar包，maven这个就作为第一个资源
 
-![image-20241123145421929](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123145421929.png)
+![image-20241123145421929](assets/image-20241123145421929.png)
 
 
 
@@ -32,12 +32,12 @@ https://maven.apache.org/download.cgi
 
 ​	对，和配置Java一样，我们又回去配置环境变量
 
-![image-20241123145720688](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123145720688.png)
+![image-20241123145720688](assets/image-20241123145720688.png)
 
-![image-20241123145734665](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123145734665.png)
+![image-20241123145734665](assets/image-20241123145734665.png)
 
-![image-20241123145702422](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123145702422.png)
+![image-20241123145702422](assets/image-20241123145702422.png)
 
 # 在IDEA中配置maven
 
-![image-20241123145851654](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123145851654.png)
+![image-20241123145851654](assets/image-20241123145851654.png)

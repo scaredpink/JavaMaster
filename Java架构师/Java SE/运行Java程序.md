@@ -31,4 +31,4 @@ public class HelloWorld {
 
 这里不需要写.class，虚拟机会自己找类名，不是找文件
 
-![image-20241123142240785](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123142240785.png)
+![image-20241123142240785](assets/image-20241123142240785.png)

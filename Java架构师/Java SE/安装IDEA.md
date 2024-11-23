@@ -18,14 +18,16 @@
 
 ​	IDEA是为每个项目设置自己的JDK，所以我们先创建一个新Project。虽然我们没有安装Maven，但是推荐选择Maven，反正早晚要用的
 
-![image-20241123143652737](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123143652737.png)
+![image-20241123143652737](assets/image-20241123143652737.png)
 
 ​	这里不得不说一句，如果小伙伴们确定要当Java工程师，未来一定会用Mac（公司会发的，不用自己买）的，到时候你就会发现Mac的IDEA真丝滑，我这是自己配的主机想装环境的时候顺便记录一下。
 
 ​	进来以后是这样的，其他的无所谓，把字体调成自己觉得合适的，原版的实在太小了。
 
-![image-20241123144230862](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123144230862.png)
+![image-20241123144230862](assets/image-20241123144230862.png)
 
 ​	打开项目结构，选好SDK，之后IDEA就可以正常工作啦
 
-![image-20241123144326105](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123144326105.png)![image-20241123144406266](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123144406266.png)
+![image-20241123144326105](assets/image-20241123144326105.png)
+
+![image-20241123144406266](assets/image-20241123144406266.png)

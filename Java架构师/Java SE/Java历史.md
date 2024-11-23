@@ -21,7 +21,7 @@
 - JDK：Java Development Kit，Java开发工具包
 - JRE：Java Runtime Environment， Java运行环境
 
-![image-20241123132912984](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123132912984.png)
+![image-20241123132912984](assets/image-20241123132912984.png)
 
 JRE是使用者运行Java程序需要的；
 
