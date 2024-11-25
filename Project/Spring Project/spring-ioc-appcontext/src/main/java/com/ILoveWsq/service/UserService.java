@@ -6,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Objects;
 
+/**
+ * @author ILoveRIRIKA
+ */
 
 public class UserService {
     private MailService mailService;
@@ -28,7 +31,7 @@ public class UserService {
 
     public User login(String email, String password) {
         try (Connection conn = dataSource.getConnection()) {
-            try (PreparedStatement ps = conn.prepareStatement("SELECT id,email,password,name FROM user WHERE email=? AND password=?")) {
+            try (PreparedStatement ps = conn.prepareStatement("SELECT id,email,password,name FROM spring_user WHERE email=? AND password=?")) {
                 ps.setObject(1, email);
                 ps.setObject(2, password);
                 try (ResultSet rs = ps.executeQuery()) {
@@ -48,7 +51,7 @@ public class UserService {
 
     public User getUser(long id) {
         try (Connection conn = dataSource.getConnection()) {
-            try (PreparedStatement ps = conn.prepareStatement("SELECT id,email,password,name FROM user WHERE id=?")) {
+            try (PreparedStatement ps = conn.prepareStatement("SELECT id,email,password,name FROM spring_user WHERE id=?")) {
                 ps.setObject(1, id);
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
@@ -67,7 +70,7 @@ public class UserService {
         Long id = null;
         User user = null;
         try (Connection conn = dataSource.getConnection()) {
-            try (PreparedStatement ps = conn.prepareStatement("SELECT id,email,password,name FROM user WHERE email=?")) {
+            try (PreparedStatement ps = conn.prepareStatement("SELECT id,email,password,name FROM spring_user WHERE email=?")) {
                 ps.setObject(1, email);
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
@@ -77,7 +80,7 @@ public class UserService {
             }
 
 
-            try (PreparedStatement ps = conn.prepareStatement("SELECT id FROM user ORDER BY id DESC LIMIT 1")) {
+            try (PreparedStatement ps = conn.prepareStatement("SELECT id FROM spring_user ORDER BY id DESC LIMIT 1")) {
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
                         id = rs.getLong(1) + 1;
@@ -89,7 +92,7 @@ public class UserService {
                 user = new User(id, email, password, name);
             }
 
-            try (PreparedStatement ps = conn.prepareStatement("INSERT INTO user (id, email, password, name) VALUES (?, ?, ?, ?)")) {
+            try (PreparedStatement ps = conn.prepareStatement("INSERT INTO spring_user (id, email, password, name) VALUES (?, ?, ?, ?)")) {
                 if (Objects.isNull(user)) {
                     return null;
                 }
