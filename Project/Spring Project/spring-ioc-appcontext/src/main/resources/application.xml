@@ -11,8 +11,8 @@
     <bean id="mailService" class="com.ILoveWsq.service.MailService"/>
 
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/learnjdbc?autoReconnect=true&amp;useSSL=false" />
-        <property name="username" value="learnspring" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/springDB?autoReconnect=true&amp;useSSL=false" />
+        <property name="username" value="springUser" />
         <property name="password" value="password" />
         <property name="maximumPoolSize" value="10" />
         <property name="autoCommit" value="true" />

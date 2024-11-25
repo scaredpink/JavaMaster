@@ -10,11 +10,11 @@ FLUSH PRIVILEGES;
 
 DROP TABLE IF EXISTS spring_user;
 CREATE TABLE spring_user (
-                          id BIGINT AUTO_INCREMENT NOT NULL,
-                          email VARCHAR(50) NOT NULL,
-                          password VARCHAR(50) NOT NULL,
-                          name VARCHAR(50) NOT NULL,
-                          PRIMARY KEY(id)
+                             id BIGINT AUTO_INCREMENT NOT NULL,
+                             email VARCHAR(50) NOT NULL,
+                             password VARCHAR(50) NOT NULL,
+                             name VARCHAR(50) NOT NULL,
+                             PRIMARY KEY(id)
 ) Engine=INNODB DEFAULT CHARSET=UTF8;
 
 INSERT INTO spring_user (id, email, password, name) VALUES (1, 'bob@example.com', 'password', 'Bob');

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc784eb6-5a4b-40b2-8c1a-a6cd8c61ca03" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/4.定制Bean.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/5.使用Resource.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/thriftCompiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/java/com/ILoveWsq/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/java/com/ILoveWsq/service/MailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/java/com/ILoveWsq/service/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/java/com/ILoveWsq/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/resources/sql/数据库操作.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7ee306fe-fd2f-4b3b-9e36-25a912530995.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7ee306fe-fd2f-4b3b-9e36-25a912530995/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7ee306fe-fd2f-4b3b-9e36-25a912530995/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7ee306fe-fd2f-4b3b-9e36-25a912530995/storage_v2/_src_/schema/springDB.S7tklw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/thriftCompiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/service/MailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/service/MailSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/service/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/validator/EmailValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/validator/NameValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/validator/PasswordValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/validator/Validator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itranswarp/learnjava/validator/Validators.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/AppConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/service/MailService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/service/MailSession.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/service/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/validator/EmailValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/validator/NameValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/validator/PasswordValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/validator/Validator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itranswarp/learnjava/validator/Validators.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-resource/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-resource/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-resource/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-resource/src/main/java/com/itranswarp/learnjava/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-resource/src/main/java/com/itranswarp/learnjava/AppService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-resource/src/main/resources/app.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-ioc-resource/src/main/resources/logo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/2.装配Bean.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/2.装配Bean.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/3.使用Annotation配置.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/3.使用Annotation配置.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-ioc-appcontext/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ioc-appcontext/src/main/resources/application.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-ioc-appcontext/src/main/resources/sql/数据库操作.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ioc-appcontext/src/main/resources/sql/数据库操作.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2pKyjLCZze5TUMyszgkzyZnxm1R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AppConfig.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/baitao/JavaMaster/Project/Spring Project/spring-ioc-customize",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="AppConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itranswarp.learnjava.AppConfig" />
+      <module name="spring-ioc-customize" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itranswarp.learnjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AppConfig" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc784eb6-5a4b-40b2-8c1a-a6cd8c61ca03" name="Changes" comment="" />
+      <created>1732529195828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732529195828</updated>
+      <workItem from="1732529197195" duration="1872000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
