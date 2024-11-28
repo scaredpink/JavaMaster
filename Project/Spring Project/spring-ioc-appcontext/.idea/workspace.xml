@@ -5,26 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43511cf8-af51-43fe-8653-23a4b6ac913a" name="Changes" comment="修改spring部分的数据库名称为spring前缀">
-      <change afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/4.定制Bean.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/thriftCompiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/java/com/ILoveWsq/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/java/com/ILoveWsq/service/MailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/java/com/ILoveWsq/service/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/java/com/ILoveWsq/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ioc-appcontext_v3/src/main/resources/sql/数据库操作.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/2.装配Bean.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/2.装配Bean.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/3.使用Annotation配置.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/1.IoC容器/3.使用Annotation配置.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/数据库操作.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/数据库操作.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-aop-logging/src/main/java/com/i/love/wsq/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java架构师/Spring/2.使用AOP/0.使用AOP.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Java架构师/Spring/2.使用AOP/0.使用AOP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8bf6552-bc12-4621-ac13-23856ebcb4dd.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8bf6552-bc12-4621-ac13-23856ebcb4dd/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8bf6552-bc12-4621-ac13-23856ebcb4dd/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8bf6552-bc12-4621-ac13-23856ebcb4dd/storage_v2/_src_/schema/learnjdbc.Pz-6XA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8bf6552-bc12-4621-ac13-23856ebcb4dd/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8bf6552-bc12-4621-ac13-23856ebcb4dd/storage_v2/_src_/schema/springDB.S7tklw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-ioc-properties/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ioc-properties/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +88,8 @@
       <workItem from="1732504422007" duration="5009000" />
       <workItem from="1732520738557" duration="684000" />
       <workItem from="1732522903351" duration="8000" />
+      <workItem from="1732775445405" duration="152000" />
+      <workItem from="1732776352267" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="修改spring部分的数据库名称为spring前缀">
       <option name="closed" value="true" />
