@@ -8,8 +8,6 @@
 
 ​	除了右键都推荐打开，右键这功能我是真不喜欢，主界面点错了会自己生成.idea文件，很烦
 
-​	![image-20241123142529940](C:\Users\76497\AppData\Roaming\Typora\typora-user-images\image-20241123142529940.png)
-
 
 
 # 配置IDEA
