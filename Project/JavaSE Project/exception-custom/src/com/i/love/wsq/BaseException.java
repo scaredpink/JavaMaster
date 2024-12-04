@@ -1,4 +1,4 @@
-package com.itranswarp.learnjava;
+package com.i.love.wsq;
 
 public class BaseException extends RuntimeException {
 

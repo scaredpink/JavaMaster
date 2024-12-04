@@ -1,0 +1,13 @@
+12-04 17:00:44.057 [main] INFO  com.i.love.wsq.Main
+Start process...
+
+12-04 17:00:44.060 [main] ERROR com.i.love.wsq.Main
+Invalid encoding.
+
+java.io.UnsupportedEncodingException: invalidCharsetName
+	at java.lang.StringCoding.encode(StringCoding.java:341) ~[?:1.8.0_411]
+	at java.lang.String.getBytes(String.java:918) ~[?:1.8.0_411]
+	at com.i.love.wsq.Main.main(Main.java:20) [logging-log4j/:?]
+12-04 17:00:44.063 [main] INFO  com.i.love.wsq.Main
+Process end.
+

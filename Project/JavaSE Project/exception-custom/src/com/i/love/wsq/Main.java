@@ -1,4 +1,4 @@
-package com.itranswarp.learnjava;
+package com.i.love.wsq;
 
 /**
  * Learn Java from https://www.liaoxuefeng.com/
@@ -8,7 +8,7 @@ package com.itranswarp.learnjava;
 public class Main {
 
 	public static void main(String[] args) {
-		String token = login("admin", "pass");
+		String token = login("admin00", "pass");
 		System.out.println("Token: " + token);
 	}
 
