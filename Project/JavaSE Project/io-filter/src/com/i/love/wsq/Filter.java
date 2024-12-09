@@ -16,7 +16,7 @@ public class Filter {
         byte[] data = "Man! what can I say?".getBytes(StandardCharsets.UTF_8);
         try (InputStream input = new ByteArrayInputStream(data)) {
             try (InputStream input2 = new BufferedInputStream(input)) {
-                
+
             }
         } catch (IOException e) {
             e.printStackTrace();
