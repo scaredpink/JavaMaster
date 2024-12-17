@@ -7,7 +7,6 @@ import com.itranswarp.learnjava.framework.GetMapping;
 import com.itranswarp.learnjava.framework.ModelAndView;
 
 public class IndexController {
-
     @GetMapping("/")
     public ModelAndView index(HttpSession session) {
         User user = (User) session.getAttribute("user");

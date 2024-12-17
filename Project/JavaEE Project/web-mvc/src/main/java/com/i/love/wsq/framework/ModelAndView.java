@@ -23,4 +23,10 @@ public class ModelAndView {
         this.model = model;
         this.view = view;
     }
+
+    public ModelAndView(String view, String name, Object value) {
+        this.view = view;
+        this.model = new HashMap<>();
+        this.model.put(name, value);
+    }
 }

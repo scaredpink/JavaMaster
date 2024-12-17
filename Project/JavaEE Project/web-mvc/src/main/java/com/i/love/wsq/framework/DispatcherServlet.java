@@ -9,10 +9,8 @@ import com.i.love.wsq.controller.UserController;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -34,6 +32,7 @@ public class DispatcherServlet extends HttpServlet {
     private Map<String, GetDispatcher> getMappings = new HashMap<>();
     private Map<String, PostDispatcher> postMappings = new HashMap<>();
     private List<Class<?>> controllers = Arrays.asList(IndexController.class, UserController.class);
+    private ViewEngine viewEngine;
 
     @Override
     public void init() throws ServletException {
@@ -66,13 +65,19 @@ public class DispatcherServlet extends HttpServlet {
                 throw new ServletException(e);
             }
         }
-        //todo:创建ViewEngine
+        this.viewEngine = new ViewEngine(getServletContext());
     }
-
-
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        process(req, resp, this.getMappings);
+    }
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        process(req, resp, this.postMappings);
+    }
+
+    public void process(HttpServletRequest req, HttpServletResponse resp, Map<String, ? extends AbstractDispatcher> mappings) throws IOException{
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
         String path = req.getRequestURI().substring(req.getContextPath().length());
@@ -85,17 +90,16 @@ public class DispatcherServlet extends HttpServlet {
         ModelAndView modelAndView = null;
         try {
             modelAndView = dispatcher.invoke(req, resp);
-        } catch (InvocationTargetException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
+        } catch (ReflectiveOperationException e) {
             throw new RuntimeException(e);
         }
+
         if (modelAndView == null) {
             return;
         }
 
-        if (modelAndView.getView().startsWith("redirect:")) {
-            resp.sendRedirect(modelAndView.getView().substring(9));
+        if (modelAndView.view.startsWith("redirect:")) {
+            resp.sendRedirect(modelAndView.view.substring(9));
             return;
         }
 
@@ -103,12 +107,15 @@ public class DispatcherServlet extends HttpServlet {
         this.viewEngine.render(modelAndView, pw);
         pw.flush();
     }
-
-    public void process(HttpServletRequest req, HttpServletResponse rep, Map<String, >)
 }
 
 
-class GetDispatcher {
+abstract class AbstractDispatcher {
+    public abstract ModelAndView invoke(HttpServletRequest req, HttpServletResponse resp)
+            throws IOException, ReflectiveOperationException;
+}
+
+class GetDispatcher extends AbstractDispatcher {
     @FieldDoc(description = "Controller实例")
     Object instance;
     @FieldDoc(description = "Controller方法")
@@ -125,8 +132,9 @@ class GetDispatcher {
         this.parameterClasses = parameterClasses;
     }
 
+    @Override
     @MethodDoc(description = "处理请求")
-    public ModelAndView invoke(HttpServletRequest req, HttpServletResponse resp) throws InvocationTargetException, IllegalAccessException {
+    public ModelAndView invoke(HttpServletRequest req, HttpServletResponse resp) throws IOException, ReflectiveOperationException {
         Object[] arguments = new Object[parameterClasses.length];
         for (int i = 0; i < parameterClasses.length; i ++ ) {
             String parameterName = parameterNames[i];
@@ -161,7 +169,7 @@ class GetDispatcher {
 }
 
 
-class PostDispatcher {
+class PostDispatcher extends AbstractDispatcher {
     @FieldDoc(description = "Controller实例")
     Object instance;
     @FieldDoc(description = "Controller方法")
@@ -178,7 +186,9 @@ class PostDispatcher {
         this.objectMapper = objectMapper;
     }
 
-    public ModelAndView invoke(HttpServletRequest req, HttpServletResponse resp) throws IOException, InvocationTargetException, IllegalAccessException {
+    @Override
+    @MethodDoc(description = "处理POST请求")
+    public ModelAndView invoke(HttpServletRequest req, HttpServletResponse resp) throws IOException, ReflectiveOperationException {
         Object[] arguments = new Object[parameterClasses.length];
         for (int i = 0; i < parameterClasses.length; i ++ ) {
             Class<?> parameterClass = parameterClasses[i];

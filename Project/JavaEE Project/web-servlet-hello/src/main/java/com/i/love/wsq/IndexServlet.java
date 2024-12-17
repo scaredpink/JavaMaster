@@ -11,9 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author baitao05
  */
-// WebServlet注解表示这是一个Servlet，并映射到地址/:
-@WebServlet(urlPatterns = "/hello")
-public class HelloServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/")
+public class IndexServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
@@ -22,7 +21,7 @@ public class HelloServlet extends HttpServlet {
         // 获取输出流:
         PrintWriter pw = resp.getWriter();
         // 写入响应:
-        pw.write("<h1>Hello, world!" + name + "</h1>");
+        pw.write("<h1>I am Index</h1>");
         // 最后不要忘记flush强制输出:
         pw.flush();
     }
