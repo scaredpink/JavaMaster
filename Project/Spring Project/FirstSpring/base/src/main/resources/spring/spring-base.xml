@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="config" class="i.love.wsq.di.config.MessageConfig">
+        <property name="host" value="bt.com"/>
+        <property name="port" value="9090"/>
+        <property name="enable" value="true"/>
+    </bean>
+
+    <bean id="messageService" class="i.love.wsq.di.service.MessageService">
+        <property name="messageConfigs"> <!--集合配置-->
+            <map>
+                <entry key="bt" value-ref="config"/>
+                <entry key="walkmen">
+                    <bean class="i.love.wsq.di.config.MessageConfig">
+                        <property name="host" value="walkman.com"/>
+                        <property name="port" value="8080"/>
+                        <property name="enable" value="true"/>
+                    </bean>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="messageProperties" class="i.love.wsq.di.config.MessageProperties">
+        <property name="subject" value="消息中心"/>
+        <property name="attribute">
+            <!--属性集合-->
+            <props>
+                <prop key="name">bt</prop>
+                <prop key="id">walkman</prop>
+                <prop key="edu">bupt</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
+
