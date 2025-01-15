@@ -3,7 +3,9 @@ package i.love.wsq;
 import i.love.wsq.di.config.MessageConfig;
 import i.love.wsq.di.config.MessageProperties;
 import i.love.wsq.di.service.MessageService;
+import i.love.wsq.service.IDeptService;
 import i.love.wsq.service.IMessageService;
+import i.love.wsq.service.impl.DeptServiceImpl;
 import i.love.wsq.vo.Dept;
 import i.love.wsq.vo.Emp;
 import java.util.Map;
@@ -19,7 +21,5 @@ public class  StartSpringApplication {
     private static final Logger LOGGER = LoggerFactory.getLogger(StartSpringApplication.class);
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-base.xml");
-        MessageProperties messageProperties = context.getBean(MessageProperties.class);
-        LOGGER.info("[{}]属性配置: {}", messageProperties.getSubject(), messageProperties.getAttribute());
     }
 }

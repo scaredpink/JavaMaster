@@ -8,10 +8,12 @@ import java.util.Map;
 import java.util.Set;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
+import org.springframework.stereotype.Service;
 
 /**
  * @author baitao05
  */
+@Service
 public class MessageService implements AutoCloseable {   // 消息的服务处理
     private static final Logger LOGGER = LoggerFactory.getLogger(MessageService.class);
     private Map<String, MessageConfig> messageConfigs;   // 这个类的执行需要config属性支持

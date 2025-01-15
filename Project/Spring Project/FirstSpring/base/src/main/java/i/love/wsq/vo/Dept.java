@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 public class Dept {
     private static final Logger LOGGER = LoggerFactory.getLogger(Dept.class);
     private Long deptNo;
-    private String dName;
+    private String deptName;
     private String loc;
 
     public Dept() {
@@ -18,7 +18,7 @@ public class Dept {
 
     @Override
     public String toString() {
-        return "[部门消息]" + super.hashCode() + " 编号: " + this.deptNo + " 名称: " + this.dName + " 位置: " + this.loc;
+        return "[部门消息]" + super.hashCode() + " 编号: " + this.deptNo + " 名称: " + this.deptName + " 位置: " + this.loc;
     }
 
     public Long getDeptNo() {
@@ -30,14 +30,12 @@ public class Dept {
         this.deptNo = deptNo;
     }
 
-    public String getdName() {
-        return dName;
+    public String getDeptName() {
+        return deptName;
     }
 
-    public void setdName(String dName) {
-        LOGGER.info("[setter方法]Dept");
-
-        this.dName = dName;
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
     }
 
     public String getLoc() {
