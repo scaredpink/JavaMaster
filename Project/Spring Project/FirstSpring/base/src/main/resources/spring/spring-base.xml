@@ -6,8 +6,13 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd
             http://www.springframework.org/schema/context
             http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <context:annotation-config/> <!--启用Annotation配置注解支持-->
+    <context:annotation-config/>
     <context:component-scan base-package="i.love.wsq.config"/>
+
+    <!--此时的Bean不使用注解的方式配置，而是直接通过XML配置文件的方式进行定义-->
+    <bean id="messageResource" class="i.love.wsq.resource.MessageResource">
+        <!-- 此时需要配置字符串，这个字符串会自动转为Resource接口实例 -->
+        <property name="resource" value="classpath*:**/META-INF/*.MF"/>
+    </bean>
 </beans>
 
