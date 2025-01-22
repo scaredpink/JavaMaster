@@ -256,6 +256,7 @@
 
     <modules>
         <module>base</module>
+        <module>aop</module>
     </modules>
 
 </project>
