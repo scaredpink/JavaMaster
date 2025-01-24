@@ -16,7 +16,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <env>dev</env>
 
-
         <spring.version>5.0.11.RELEASE</spring.version>
 
         <!--Log-->

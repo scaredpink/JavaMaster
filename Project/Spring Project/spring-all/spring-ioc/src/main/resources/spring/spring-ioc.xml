@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <!--配置文件中定义名称为"messageService"的Bean对象，并设置该对象的类型-->
+       <bean id="messageService" class="i.love.wsq.service.impl.QQMessageServiceImpl"/>
+</beans>
