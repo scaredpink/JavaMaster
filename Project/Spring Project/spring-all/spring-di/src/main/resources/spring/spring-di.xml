@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--定义消息通道的配置Bean，这个Bean需要进行属性的配置-->
+    <bean id="config" class="i.love.wsq.config.MessageConfig">
+        <!--配置Bean的属性-->
+        <property name="host" value="bt.com"/>
+        <property name="port" value="8859"/>
+        <!--比较特殊的是，对于Boolean属性，Spring扩展了很多组合-->
+        <!--0和1, false和true, off和on都可以-->
+        <property name="enable" value="on"/>
+    </bean>
+
+    <bean id="messageService" class="i.love.wsq.service.MessageService">
+        <!--注意，config是引用数据类型，它不能用value，而是用ref了-->
+        <property name="messageConfig" ref="config"/>
+    </bean>
+</beans>

@@ -5,14 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>i.love.wsq</groupId>
-    <artifactId>java-se</artifactId>
+    <artifactId>codeforces</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-
-        <module>java-claseese-autocloseable</module>
-        <module>common-runtime</module>
-        <module>common-cleaner</module>
+        <module>Round993-div4</module>
     </modules>
 
     <properties>
