@@ -18,6 +18,13 @@ public class AppConfig {
         AppService appService = context.getBean(AppService.class);
         appService.printLogo();
         appService.printProperties();
+        Integer nintendo = 2;
+
+        switch (nintendo) {
+            case 2: {
+                
+            }
+        }
     }
 
 }

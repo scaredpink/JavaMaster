@@ -12,6 +12,7 @@
         <module>origin-java-ioc</module>
         <module>spring-ioc</module>
         <module>spring-helloworld</module>
+        <module>spring-di</module>
     </modules>
 
     <properties>
