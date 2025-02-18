@@ -1,6 +1,8 @@
 package i.love.wsq.action;
 
+import i.love.wsq.action.abs.AbstractAction;
 import i.love.wsq.service.IMessageService;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import org.slf4j.Logger;
@@ -15,18 +17,23 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller // 控制层注解
 @RequestMapping("/pages/message")
-public class MessageAction {
+public class MessageAction extends AbstractAction {
     private static Logger LOGGER = LoggerFactory.getLogger(MessageAction.class);
 
     @Autowired
     private IMessageService messageService;     // 注入实例
 
-    @GetMapping(value = "/echo_map/{.*}")
-    public ModelAndView echo(
-            @MatrixVariable Map<String, String> params) {
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            LOGGER.info("消息回应处理 {} = {}", entry.getKey(), entry.getValue());
-        }
-        return null;
+    @GetMapping("/input")
+    public String input() {
+        return "/pages/message/input.jsp";
+    }
+
+    @PostMapping(value = "/echo")
+    public ModelAndView echo(String message, Integer level, Date pubDate) {
+        ModelAndView modelAndView = new ModelAndView("/pages/message/show.jsp");
+        modelAndView.addObject("msg", message);
+        modelAndView.addObject("level", level);
+        modelAndView.addObject("pubDate", pubDate);
+        return modelAndView;
     }
 }

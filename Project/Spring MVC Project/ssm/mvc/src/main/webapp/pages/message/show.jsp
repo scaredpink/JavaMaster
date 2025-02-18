@@ -4,6 +4,8 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>${echoMessage}</h1>
+    <h1>${msg}</h1>
+    <h1>${level}</h1>
+    <h1>${pubDate}</h1>
 </body>
 </html>
