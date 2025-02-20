@@ -15,6 +15,12 @@ public class Main {
         List<String> upperCaseList = Optional.ofNullable(team.getNameList()).orElseGet(ArrayList::new).stream()
                 .map(String::toUpperCase)
                 .collect(Collectors.toList());
+
+        List<String> ruleList = new ArrayList<>();
+        ruleList.add("123");
+        String matchRule = Optional.ofNullable(ruleList).orElseGet(ArrayList::new).stream()
+                .filter("rule"::equals)
+                .findFirst().orElseGet(() -> {return null;});
     }
 
     public static Optional<String> getUser() {
