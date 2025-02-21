@@ -11,32 +11,41 @@ import jdk.nashorn.internal.runtime.options.Option;
  */
 public class Main {
     public static void main(String[] args) {
-        Team team = new Team();
-        List<String> upperCaseList = Optional.ofNullable(team.getNameList()).orElseGet(ArrayList::new).stream()
-                .map(String::toUpperCase)
-                .collect(Collectors.toList());
+        new Thread(() -> {
+            String message = "A发送的消息";
+            NetConnection conn = NetResourceFactory.getNetConnection("用户A");
+            conn.send(message);
+        }).start();
 
-        List<String> ruleList = new ArrayList<>();
-        ruleList.add("123");
-        String matchRule = Optional.ofNullable(ruleList).orElseGet(ArrayList::new).stream()
-                .filter("rule"::equals)
-                .findFirst().orElseGet(() -> {return null;});
-    }
-
-    public static Optional<String> getUser() {
-//        return Optional.of("baitao05");
-        return Optional.of(null);
+        new Thread(() -> {
+            String message = "B发送的消息";
+            NetConnection conn = NetResourceFactory.getNetConnection("用户B");
+            conn.send(message);
+        }).start();
     }
 }
 
-class Team {
-    private List<String> nameList;
+class NetResourceFactory {
+    public static final ThreadLocal<NetConnection> NET_CONNECTION_THREAD_LOCAL = new ThreadLocal<>();
 
-    public List<String> getNameList() {
-        return nameList;
+    public static NetConnection getNetConnection(String userInfo) {
+        NetConnection conn = NET_CONNECTION_THREAD_LOCAL.get();
+        if (conn == null) {
+            conn = new NetConnection();
+            conn.setUserInfo(userInfo);
+            NET_CONNECTION_THREAD_LOCAL.set(conn);
+        }
+        return conn;
+    }
+}
+
+class NetConnection {
+    private String userInfo;
+    public void send(String msg) {
+        System.out.printf("NetConnection %s 发送: %s\n", this.userInfo, msg);
     }
 
-    public void setNameList(List<String> nameList) {
-        this.nameList = nameList;
+    public void setUserInfo(String userInfo) {
+        this.userInfo = userInfo;
     }
 }

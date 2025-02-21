@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="i.love.wsq.domain.Book" alias="Book"/>
+        <package name="i.love.wsq.domain"/>
+    </typeAliases>
+
+    <environments default="development"> 		<!-- 定义数据库连接池 -->
+        <environment id="development"> 		<!-- 数据库资源配置 -->
+            <transactionManager type="jdbc" /> 	<!-- JDBC事务管理 -->
+            <!-- 定义数据源，MyBatis内部提供有三种数据源的支持，分别为： -->
+            <!-- POOLED：采用MyBatis内置的连接池进行数据库连接管理 -->
+            <!-- UNPOOLED：不使用连接池管理数据库连接 -->
+            <!-- JNDI：引入外部的数据库连接池配置 -->
+            <dataSource type="POOLED">		<!-- 配置数据源 -->
+                <!-- 数据库的驱动程序路径，配置的mysql驱动包中的类名称 -->
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <!-- 数据库的连接地址 -->
+                <property name="url" value="jdbc:mysql://localhost:3306/i_love_wsq" />
+                <!-- 数据库连接的用户名 -->
+                <property name="username" value="root" />
+                <!-- 数据库的连接密码 -->
+                <property name="password" value="baitao1597530B!" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>  					<!-- 配置SQL映射文件路径 -->
+        <mapper resource="mybatis/mapper/Book.xml" />  <!-- 映射文件路径 -->
+    </mappers>
+
+</configuration>
