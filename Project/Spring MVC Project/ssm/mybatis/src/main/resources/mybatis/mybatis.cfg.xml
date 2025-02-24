@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
     <typeAliases>
         <typeAlias type="i.love.wsq.domain.Book" alias="Book"/>
         <package name="i.love.wsq.domain"/>
@@ -30,5 +33,4 @@
     <mappers>  					<!-- 配置SQL映射文件路径 -->
         <mapper resource="mybatis/mapper/Book.xml" />  <!-- 映射文件路径 -->
     </mappers>
-
 </configuration>
