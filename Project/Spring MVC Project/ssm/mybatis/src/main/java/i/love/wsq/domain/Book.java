@@ -1,9 +1,11 @@
 package i.love.wsq.domain;
 
+import java.io.Serializable;
+
 /**
  * @author baitao05
  */
-public class Book {
+public class Book implements Serializable {
     private Long bid;
     private String name;
     private String author;
@@ -20,6 +22,10 @@ public class Book {
     }
 
     public Book() {
+    }
+
+    public Book(String name) {
+        this.name = name;
     }
 
     public Book(String name, String author, Double price) {

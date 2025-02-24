@@ -3,18 +3,130 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 设置命名空间，可以与不同表的同类型操作进行区分，使用时以“空间名称.id”的方式调用 -->
 <mapper namespace="i.love.wsq.BookNS">
+    <cache/>
     <!-- 定义增加数据的操作配置，同时指定参数类型 -->
     <!-- 此处的id表示的是用户操作时指定标记，SQL操作时：“BookNS.doCreate” -->
     <!-- parameterType指的是参数的类型，此时应该操作的是简单Java类 -->
     <insert id="doCreate" parameterType="Book" keyProperty="bid" keyColumn="bid" useGeneratedKeys="true">
-        INSERT INTO book(name, author, price) VALUES (#{name}, #{author}, #{price});
+        INSERT INTO book(name, author, price) VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name == null or name == &quot;&quot;">
+                'NoName',
+            </if>
+            <if test="name != null and name != &quot;&quot;">
+                #{name},
+            </if>
+            <if test="author == null or author == &quot;&quot;">
+                'NoAuthor',
+            </if>
+            <if test="author != null and author != &quot;&quot;">
+                #{author},
+            </if>
+            <if test="price == null or price == &quot;&quot;">
+                -1,
+            </if>
+            <if test="price != null and price != &quot;&quot;">
+                #{price},
+            </if>
+        </trim>
     </insert>
 
+    <select id="findById" parameterType="java.lang.Long" resultType="Book">
+        <include refid="selectBook"></include>
+        WHERE bid=#{bid}
+    </select>
+
+    <select id="findByColumn" parameterType="Book" resultType="Book">
+        SELECT bid, name, author, price
+        FROM book
+        <if test="bid != null and bid != &quot;&quot;">
+            WHERE bid=#{bid}
+        </if>
+        <if test="name != null and name != &quot;&quot;">
+            WHERE name=#{name}
+        </if>
+        <if test="author != null and author != &quot;&quot;">
+            WHERE author=#{author}
+        </if>
+        <if test="price != null and price != &quot;&quot;">
+            WHERE price=#{price}
+        </if>
+    </select>
+
+    <select id="findByCondition" parameterType="Book" resultType="Book">
+        SELECT bid, name, author, price
+        FROM book
+        <where>
+            <choose>
+                <when test="name != null and author != null">
+                    name=#{name} AND author=#{author}
+                </when>
+                <when test="name != null and author == null">
+                    name=#{name}
+                </when>
+                <when test="name == null and author != null">
+                    author=#{author}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
     <update id="doEdit" parameterType="Book">
-        UPDATE book SET name=#{name}, author=#{author}, price=#{price} WHERE bid=#{bid}
+        UPDATE book
+        <set>
+            <if test="name != null and name != &quot;&quot;">
+                name = #{name},
+            </if>
+            <if test="author != null and author != &quot;&quot;">
+                author = #{author},
+            </if>
+            <if test="price != null">
+                price=#{price},
+            </if>
+        </set>
+        <where>
+            <if test="bid != null and bid != 0">
+                bid=#{bid}
+            </if>
+            <if test="bid == null">
+                bid=-1
+            </if>
+        </where>
     </update>
 
-    <delete id="doRemove" parameterType="Book">
-        DELETE FROM book WHERE bid=#{bid}
-    </delete>
+    <sql id ="selectBook">
+        SELECT bid, name, author, price
+        FROM book
+    </sql>
+
+    <select id="findByIds" parameterType="java.lang.Long" resultType="Book">
+        <include refid="selectBook"/>
+        <where>
+            bid IN
+            <foreach collection="array" open="(" close=")" separator="," item="bid">
+                #{bid}
+            </foreach>
+        </where>
+    </select>
+
+    <select id="doRemove" parameterType="java.lang.Long">
+        DELETE from book
+        <where>
+            bid IN
+            <foreach collection="array" open="(" close=")" separator="," item="bid">
+                #{bid}
+            </foreach>
+        </where>
+    </select>
+
+    <select id="doCreateBatch" parameterType="Book">
+        INSERT INTO book (name, author, price) VALUES
+        <foreach collection="list" separator="," item="book">
+            (#{book.name}, #{book.author}, #{book.price})
+        </foreach>
+    </select>
+
 </mapper>
