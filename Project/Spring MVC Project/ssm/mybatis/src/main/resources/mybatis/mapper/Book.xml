@@ -17,4 +17,22 @@
     <delete id="doRemove" parameterType="Book">
         DELETE FROM book WHERE bid=#{bid}
     </delete>
+
+    <select id="findById" parameterType="java.lang.Long" resultType="Book">
+        SELECT bid,name,author,price FROM book WHERE bid=#{bid}
+    </select>
+
+    <select id="findAll" resultType="Book">
+        SELECT bid,name,author,price FROM book
+    </select>
+
+    <!--字段用$, 数据用#-->
+    <select id="findSplit" resultType="Book" parameterType="java.util.Map">
+        SELECT bid,name,author,price FROM book
+        WHERE ${column} LIKE #{keyword} LIMIT #{start}, #{lineSize}
+    </select>
+
+    <select id="getAllCount" resultType="java.lang.Long" parameterType="java.util.Map">
+        SELECT count(*) FROM book WHERE ${column} LIKE #{keyword}
+    </select>
 </mapper>
