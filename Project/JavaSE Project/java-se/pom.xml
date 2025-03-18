@@ -13,6 +13,7 @@
         <module>java-claseese-autocloseable</module>
         <module>common-runtime</module>
         <module>common-cleaner</module>
+        <module>regex</module>
     </modules>
 
     <properties>

@@ -17,4 +17,8 @@
         <!--注意，config是引用数据类型，它不能用value，而是用ref了-->
         <property name="messageConfig" ref="config"/>
     </bean>
+
+    <bean id="messageManager" class="i.love.wsq.service.MessageManager">
+
+    </bean>
 </beans>
