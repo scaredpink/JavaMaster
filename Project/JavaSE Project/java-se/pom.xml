@@ -14,7 +14,15 @@
         <module>common-runtime</module>
         <module>common-cleaner</module>
         <module>regex</module>
-    </modules>
+        <module>jsonpath</module>
+		<module>expression</module>
+		<module>mock</module>
+		<module>map-struct</module>
+		<module>json-util</module>
+		<module>generics</module>
+		<module>Hashset</module>
+		<module>common</module>
+	</modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
