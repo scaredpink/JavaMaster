@@ -18,7 +18,7 @@ public class TestBook {
 
     @Test
     public void testDoCreate() throws Exception {
-        Book book = new Book("活着", "余华", 55.55);
+        Book book = new Book("活着", "余华", 55.·55);
         LOGGER.info("doCreate {}", MyBatisSessionFactory.getSession().insert("i.love.wsq.BookNS.doCreate", book));
         InputStream input = Resources.getResourceAsStream("mybatis/mybatis.cfg.xml");
         SqlSession session = MyBatisSessionFactory.getSession();
