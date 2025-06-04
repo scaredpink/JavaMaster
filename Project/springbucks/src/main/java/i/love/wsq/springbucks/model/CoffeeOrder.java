@@ -1,9 +1,6 @@
 package i.love.wsq.springbucks.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -18,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString(callSuper = true)
 public class CoffeeOrder extends BaseEntity implements Serializable {
 
     private String customer;
@@ -27,5 +25,5 @@ public class CoffeeOrder extends BaseEntity implements Serializable {
     private List<Coffee> items; // 一个订单可以对应多个咖啡
 
     @Column(nullable = false)
-    private OrderState state;  // 订单的状态
+    private Integer state;  // 订单的状态
 }
