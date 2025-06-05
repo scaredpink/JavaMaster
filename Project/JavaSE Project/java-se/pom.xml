@@ -22,6 +22,7 @@
 		<module>generics</module>
 		<module>Hashset</module>
 		<module>common</module>
+		<module>Time</module>
 	</modules>
 
     <properties>
