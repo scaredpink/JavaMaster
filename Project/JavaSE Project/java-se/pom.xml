@@ -23,7 +23,8 @@
 		<module>Hashset</module>
 		<module>common</module>
 		<module>Time</module>
-	</modules>
+        <module>inner-class</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
