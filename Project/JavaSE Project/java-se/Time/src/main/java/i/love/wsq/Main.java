@@ -9,10 +9,8 @@ public class Main {
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-        String dateTime = dateTimeFormatter.format();
-        System.out.println(dateTime);
-
-        System.out.println();
+        String.valueOf(true);
+        System.out.println(String.valueOf(true));
     }
 
 }
